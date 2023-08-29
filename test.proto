@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package test;
+
+option go_package = "testpb/";
+
+message MyMessage {
+    string name = 1;
+    uint32 age = 2;
+    repeated NestedMessage nested = 3;
+}
+
+message NestedMessage {
+    string country = 1;
+    int32 code = 2;
+}
